@@ -1,0 +1,12 @@
+﻿@model IEnumerable<stTest.Models.Answer>
+@{
+    ViewBag.Title = "Все ";
+}
+<a asp-action="Create">Пройти опрос</a>
+<table class="table">
+    <tr><td>Имя</td><td>Возраст</td><td>Пол</td><td>Дата рождения</td><td>Семейное положение</td><td>Наличие любви к программированию</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Name</td><td>@item.Age</td><td>@item.Gender</td><td>@item.BirthDate</td><td>@item.MaritalStatus</td><td>@item.Programming</td></tr>
+    }
+</table>
