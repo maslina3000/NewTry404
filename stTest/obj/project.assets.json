@@ -12543,11 +12543,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asus\\Desktop\\stTest\\stTest.csproj",
+      "projectUniqueName": "C:\\Users\\asus\\Desktop\\NewTry404\\stTest\\stTest.csproj",
       "projectName": "stTest",
-      "projectPath": "C:\\Users\\asus\\Desktop\\stTest\\stTest.csproj",
+      "projectPath": "C:\\Users\\asus\\Desktop\\NewTry404\\stTest\\stTest.csproj",
       "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asus\\Desktop\\stTest\\obj\\",
+      "outputPath": "C:\\Users\\asus\\Desktop\\NewTry404\\stTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
