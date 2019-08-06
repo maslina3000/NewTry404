@@ -1,41 +1,97 @@
-﻿@model stTest.Models.Answer
-@{
-    ViewBag.Title = "Добавление ответа";
-}
+﻿@using stTest.Models;
+@model SQA;
 
-    <div class="jumbotron">
-        <form asp-action="create" asp-controller="home">
-            <div class="form-group">
-                <label asp-for="Name" class="control-label">Введите имя</label><br>
-                <input type="text" asp-for="Name" class="form-control" /><br>
-            </div>
-            <div class="form-group">
-                <label asp-for="Age" class="control-label">Введите возраст</label><br>
-                <input type="number" asp-for="Age" class="form-control" /><br>
-            </div>
-            <div class="form-group">
-                <label asp-for="Gender" class="control-label">Введите пол</label><br>
-                <input type="radio" asp-for="Gender" name="Gender" value="male"> Мужской<br>
-                <input type="radio" asp-for="Gender" name="Gender" value="female"> Женский<br>
-            </div>
-            <div class="form-group">
-                <label asp-for="BirthDate" class="control-label">Введите дату рождения</label><br>
-                <input type="date" asp-for="BirthDate" class="form-control" /><br>
-            </div>
-            <div class="form-group">
-                <label asp-for="MaritalStatus" class="control-label">Введите семейное положение</label><br>
-                <input type="radio" asp-for="MaritalStatus" name="MaritalStatus" value="single"> Не замужем/не женат<br>
-                <input type="radio" asp-for="MaritalStatus" name="MaritalStatus" value="maried"> Замужем/женат<br>
-            </div>
-            <div class="form-group">
-                <label asp-for="Programming" class="control-label">Любите ли вы программировать</label><br>
-                <input type="radio" asp-for="Programming" name="Programming" value="yes"> Да<br>
-                <input type="radio" asp-for="Programming" name="Programming" value="no"> Нет<br>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Send" class="btn btn-default" />
-            </div>
+@*
+    @using (Html.BeginForm("ProcessQuestionary", "Home", FormMethod.Post))
+    {
+        <div class="jumbotron">
+            <b>Вопрос @Model.QuestionID</b><br>
+            <input type="text" name="Text" value="@Model.Text" readonly>
+            <input type="text" name="SessionId" value=@Model.SessionID hidden>
+            <input type="text" name="QuestionId" value=@Model.QuestionID hidden><br>
+            <input type="text" name="ThisAnswer">
+            @if (Model.QuestionID == 0)
+            {
+                <input type="text" name="ThisAnswer"><br>
+                <input type="text" asp-for=Name class="form-control" /><br>
+            }
+            else if (Model.QuestionID == 1)
+            {
+                <input type="number" name="ThisAnswer"><br>
+            }
+            else if (Model.QuestionID == 2)
+            {
+                <select size="0" name="ThisAnswer"></select><br>
+            }
+            else if (Model.QuestionID == 3)
+            {
+                <input type="text" name="ThisAnswer"><br>
+            }
+            else if (Model.QuestionID == 4)
+            {
+                <input type="text" name="ThisAnswer"><br>
+            }
+            else if (Model.QuestionID == 5)
+            {
+                <input type="text" name="ThisAnswer"><br>
+            }
+            <input type="submit" name="questionNumber" value="Last">
+            <input type="submit" name="questionNumber" value="Next">
+        </div>
+*@
 
-        </form>
-    </div>
+<div class="jumbotron">
+    <form asp-action="create" asp-controller="home">
+        <div class="form1">
+            @*  @if (Model.QuestionId != 1)
+            {
+                @Html.Editor(Model.Name, new { HtmlAttributes = new { style = "display: none" } })}
+
+            }
+            else
+            { @Html.Editor(Model.Name, new { htmlAttributes = new { style = "" } })}
+            *@
+            <label asp-for="Name" class="control-label">Введите имя</label><br>
+            <input type="text" asp-for="Name" class="form-control" /><br>
+        </div>
+        <div class="form-group">
+            <label asp-for="Age" class="control-label">Введите возраст</label><br>
+            <input type="number" asp-for="Age" class="form-control" /><br>
+        </div>
+        <div class="form2">
+            <label asp-for="Gender" class="control-label">Введите пол</label><br>
+            <input type="radio" asp-for="Gender" name="Gender" value="male"> Мужской<br>
+            <input type="radio" asp-for="Gender" name="Gender" value="female"> Женский<br>
+        </div>
+        <div class="form3">
+            <label asp-for="BirthDate" class="control-label">Введите дату рождения</label><br>
+            <input type="date" asp-for="BirthDate" class="form-control" /><br>
+        </div>
+        <div class="form4">
+            <label asp-for="MaritalStatus" class="control-label">Введите семейное положение</label><br>
+            <input type="radio" asp-for="MaritalStatus" name="MaritalStatus" value="single"> Не замужем/не женат<br>
+            <input type="radio" asp-for="MaritalStatus" name="MaritalStatus" value="maried"> Замужем/женат<br>
+        </div>
+        <div class="form5">
+            <label asp-for="Programming" class="control-label">Любите ли вы программировать</label><br>
+            <input type="radio" asp-for="Programming" name="Programming" value="yes"> Да<br>
+            <input type="radio" asp-for="Programming" name="Programming" value="no"> Нет<br>
+        </div>
+        <input type="submit" value="Сохранить ответ" class="btn btn-default" />
+        @*  <input type="button" name="questionNumber" value="Last">
+        <input type="button" name="questionNumber" value="Next">
+          <div class="Navigation">
+                <button>Назад</button><button>Вперед</button>
+                @if (int formID = 1)
+                        {
+                    form1 =
+                        }
+                <button>Назад</button><button>Вперед</button>
+
+            </div>
+        *@
+    </form>
+</div>
+
+
 

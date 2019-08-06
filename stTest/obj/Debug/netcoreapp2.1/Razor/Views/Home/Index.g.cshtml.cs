@@ -57,7 +57,7 @@ using stTest.Models;
 #line default
 #line hidden
             BeginContext(78, 39, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "481134a14ff24b21a8805814db11659f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "620317b09fe24b2fbc662c6799d1586e", async() => {
                 BeginContext(101, 12, true);
                 WriteLiteral("Пройти опрос");
                 EndContext();
